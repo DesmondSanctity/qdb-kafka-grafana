@@ -1,0 +1,30 @@
+{
+  "name": "qdb-kafka-grafana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:producer": "node app-producer/index.js",
+    "start:consumer": "node app-consumer/index.js",
+    "start": "npm run start:producer & npm run start:consumer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "grafana",
+    "kafka",
+    "questdb",
+    "weather",
+    "openweathermap"
+  ],
+  "author": "Desmond Obisi",
+  "license": "ISC",
+  "description": "A service that uses Kafka to stream weather data from the OpenWeatherMap API, store and process it with QuestDB, and create insightful visualizations with Grafana",
+  "dependencies": {
+    "@questdb/nodejs-client": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "kafkajs": "^2.2.4",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2"
+  }
+}
